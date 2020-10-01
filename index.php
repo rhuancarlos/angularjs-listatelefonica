@@ -42,7 +42,7 @@
  				{ nome: "Rhuan Carlos", cidade: "Teresina", telefone: "86999856027", operadora: {nome: "Vivo", codigo: "015"}, cor: "#4286f4" },
 				{ nome: "Liana Karina", cidade: "Teresina", telefone: "86999875279", operadora: {nome: "Tim", codigo: "041"}, cor: "#041633" },
 				{ nome: "Maria Rosa", cidade: "Codó", telefone: "99999933339", operadora: {nome: "Claro", codigo: "021"}, cor: "#065608" },
-				{ nome: "Antonio Carlos", cidade: "Codó", telefone: "99999992345", operadora: {nome: "Oi", codigo: "031"}, cor: "#935b07" },
+				{ nome: "Antonio Carlos", cidade: "Codó", telefone: "99999992345", operadora: {nome: "Oi", codigo: "031"}, cor: {corhex: "#935b07"} },
 			];
 			$scope.operadoras = [
 				{ nome: "Oi", codigo: "031"},
@@ -52,16 +52,16 @@
 			];
 			
 			$scope.cores = [
-				{ nome: "Indigo", cor: "#6610f2"},
-				{ nome: "Purple", cor: "#6f42c1"},
-				{ nome: "Pink", cor: "#e83e8c"},
-				{ nome: "Red", cor: "#dc3545"},
-				{ nome: "Orange", cor: "#fd7d1450"},
-				{ nome: "yellow", cor: "#ffc107"},
-				{ nome: "Green", cor: "#28a745"},
-				{ nome: "Teal", cor: "#20c997"},
-				{ nome: "Cyan", cor: "#17a2b8"},
-				{ nome: "Gray", cor: "#6c757d"},
+				{ nome: "Indigo", corhex: "#6610f2"},
+				{ nome: "Purple", corhex: "#6f42c1"},
+				{ nome: "Pink", corhex: "#e83e8c"},
+				{ nome: "Red", corhex: "#dc3545"},
+				{ nome: "Orange", corhex: "#fd7d1450"},
+				{ nome: "yellow", corhex: "#ffc107"},
+				{ nome: "Green", corhex: "#28a745"},
+				{ nome: "Teal", corhex: "#20c997"},
+				{ nome: "Cyan", corhex: "#17a2b8"},
+				{ nome: "Gray", corhex: "#6c757d"},
 			];
 
 			$scope.adicionaContato = function(contato){
@@ -102,9 +102,6 @@
 		<div class="col-4">
 		<div class="jumbotron">
 			<h3 ng-bind="appTitle1"></h3>
-		<!-- {{ operadoras }} -->
-		<!-- {{ cores }} -->
-		{{contato.cor}}
 		<input class="form-control" type="text" placeholder="Nome" ng-model="contato.nome">
 		<input class="form-control" type="text" placeholder="Cidade" ng-model="contato.cidade">
 		<input class="form-control" type="text" placeholder="Telefone" ng-model="contato.telefone" maxlength="11">
